@@ -1,5 +1,5 @@
--- Model Name   : orders
--- Source Models: stg_orders, stg_payments
+-- Model Name   : order
+-- Source Models: stg_orders
 {% set payment_methods = ['credit_card', 'coupon', 'bank_transfer', 'gift_card'] %}
 
 with orders as (
@@ -7,8 +7,6 @@ with orders as (
     select * from {{ ref('stg_orders') }}
 
 ),
--- Purpose      : The purpose of this dbt model is to consolidate order and payment information, aggregating payment amounts by method and calculating the total amount, to provide a comprehensive view of each order's details and associated payments.
-
 payments as (
     select * from {{ ref('stg_payments') }}
 ),
