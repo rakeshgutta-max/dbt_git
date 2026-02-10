@@ -1,4 +1,5 @@
-
+-- Model Name   : int_sales_enriched
+-- Source Models: stg_sales
 select
     s.*,
     {{ convert_to_usd('sale_amount','currency') }} as sale_usd
