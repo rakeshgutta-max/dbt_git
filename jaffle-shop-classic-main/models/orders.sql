@@ -1,6 +1,6 @@
--- Model Name   : order
+-- Model Name   : orders
+-- Source Models: stg_orders, stg_payments
 -- Purpose      : The purpose of this dbt model is to consolidate order and payment data, providing a comprehensive view of each order's payments, including the total amount and breakdown by various payment methods.
--- Source Models: stg_orders
 {% set payment_methods = ['credit_card', 'coupon', 'bank_transfer', 'gift_card'] %}
 
 with orders as (
