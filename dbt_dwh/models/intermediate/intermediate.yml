@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: int_sales_enriched
+    description: "Sales data enriched with USD conversion and reusable semantic logic."
+
+    columns:
+      - name: order_id
+        description: "Unique order identifier"
+        tests:
+          - not_null
+
+      - name: customer_id
+        description: "Customer reference key"
+        tests:
+          - not_null
+
+      - name: product_id
+        description: "Product reference key"
+
+      - name: sale_amount
+        description: "Original sale amount in local currency"
+
+      - name: currency
+        description: "Transaction currency code"
+
+      - name: sale_usd
+        description: "Converted sale amount in USD"
+        tests:
+          - not_null
+
+      - name: order_date
+        description: "Date of the order"

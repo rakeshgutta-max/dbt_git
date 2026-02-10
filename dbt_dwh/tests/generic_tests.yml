@@ -1,0 +1,6 @@
+version: 2
+models:
+  - name: dim_customers
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "customer_id > 0"

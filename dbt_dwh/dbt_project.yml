@@ -1,0 +1,18 @@
+name: 'domo_semantic_dbt'
+version: '1.0'
+config-version: 2
+
+profile: 'domo_profile'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+models:
+  domo_semantic_dbt:
+    staging:
+      materialized: view
+    intermediate:
+      materialized: table
+    marts:
+      materialized: table

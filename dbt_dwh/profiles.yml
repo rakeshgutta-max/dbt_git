@@ -1,0 +1,11 @@
+domo_profile:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: dbuser
+      password: dbpass
+      port: 5432
+      dbname: analytics
+      schema: public
