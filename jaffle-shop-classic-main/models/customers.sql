@@ -1,6 +1,6 @@
+-- Source Models: stg_customers, stg_orders, stg_payments
 -- Model Name   : customers
 -- Purpose      : The purpose of this dbt model is to consolidate customer data, including their first and last names, first and most recent order dates, number of orders, and lifetime value, by joining information from the 'customers', 'orders', and 'payments' tables.
--- Source Models: stg_customer
 with customers as (
 
     select * from {{ ref('stg_customers') }}
