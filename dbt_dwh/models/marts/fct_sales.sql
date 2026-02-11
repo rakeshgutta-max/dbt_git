@@ -1,5 +1,6 @@
--- Model Name   : fct_sale
--- Source Models: int_sales_enrich
+-- Model Name   : fct_sales
+-- Purpose      : The purpose of the dbt model "fct_sales" is to consolidate and organize sales data, including order details, customer information, product specifics, and transaction amounts, in order to facilitate comprehensive analysis and informed decision-making for the business.
+-- Source Models: int_sales_enriched
 select
     i.order_id,
     i.customer_id,
